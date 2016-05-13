@@ -1,0 +1,31 @@
+{
+  "name" : "customersview",
+  "sql" : "SELECT CAST(`columns`[0] AS VARCHAR(10)) AS `cust_id`, `columns`[1] AS `cust_name`, `columns`[2] AS `cust_state`, `columns`[3] AS `cust_gender`, `columns`[4] AS `cust_age`, `columns`[6] AS `cust_membership`\nFROM `dfs`.`root`.`customers.all.csv`",
+  "fields" : [ {
+    "name" : "cust_id",
+    "type" : "VARCHAR",
+    "precision" : 10,
+    "isNullable" : true
+  }, {
+    "name" : "cust_name",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "cust_state",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "cust_gender",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "cust_age",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "cust_membership",
+    "type" : "ANY",
+    "isNullable" : true
+  } ],
+  "workspaceSchemaPath" : [ "dfs", "tmp" ]
+}

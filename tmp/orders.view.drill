@@ -1,0 +1,28 @@
+{
+  "name" : "orders",
+  "sql" : "SELECT CAST(`columns`[0] AS BIGINT) AS `orderid`, CAST(`columns`[1] AS VARCHAR(12)) AS `ordermonth`, CAST(`columns`[2] AS BIGINT) AS `custid`, CAST(`columns`[3] AS VARCHAR(2)) AS `state`, CAST(`columns`[4] AS BIGINT) AS `ordertotal`\nFROM `dfs`.`root`.`./orders`",
+  "fields" : [ {
+    "name" : "orderid",
+    "type" : "BIGINT",
+    "isNullable" : true
+  }, {
+    "name" : "ordermonth",
+    "type" : "VARCHAR",
+    "precision" : 12,
+    "isNullable" : true
+  }, {
+    "name" : "custid",
+    "type" : "BIGINT",
+    "isNullable" : true
+  }, {
+    "name" : "state",
+    "type" : "VARCHAR",
+    "precision" : 2,
+    "isNullable" : true
+  }, {
+    "name" : "ordertotal",
+    "type" : "BIGINT",
+    "isNullable" : true
+  } ],
+  "workspaceSchemaPath" : [ "dfs", "tmp" ]
+}

@@ -1,0 +1,18 @@
+{
+  "name" : "tweetsview",
+  "sql" : "SELECT `t`.`id` AS `tweetid`, `t`.`text` AS `tweettext`, CAST(`t`.`timestamp_ms` AS DATE) AS `thedate`\nFROM `dfs`.`root`.`./tweets/tweet_60.json` AS `t`",
+  "fields" : [ {
+    "name" : "tweetid",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "tweettext",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "thedate",
+    "type" : "DATE",
+    "isNullable" : true
+  } ],
+  "workspaceSchemaPath" : [ "dfs", "tmp" ]
+}

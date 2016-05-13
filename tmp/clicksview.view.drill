@@ -1,0 +1,35 @@
+{
+  "name" : "clicksview",
+  "sql" : "SELECT `t`.`trans_id`, CAST(`t`.`date` AS DATE) AS `thedate`, CAST(`t`.`user_info`['cust_id'] AS VARCHAR(10)) AS `cust_id`, `t`.`user_info`['device'] AS `device`, `t`.`user_info`['state'] AS `custstate`, CAST(`t`.`trans_info`['prod_id'][0] AS BIGINT) AS `prod_id`, `t`.`trans_info`['purch_flag'] AS `purch_flag`\nFROM `dfs`.`root`.`./nested/clicks/clicks_50.json` AS `t`\nWHERE `t`.`trans_info`['prod_id'][0] IS NOT NULL",
+  "fields" : [ {
+    "name" : "trans_id",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "thedate",
+    "type" : "DATE",
+    "isNullable" : true
+  }, {
+    "name" : "cust_id",
+    "type" : "VARCHAR",
+    "precision" : 10,
+    "isNullable" : true
+  }, {
+    "name" : "device",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "custstate",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "prod_id",
+    "type" : "BIGINT",
+    "isNullable" : true
+  }, {
+    "name" : "purch_flag",
+    "type" : "ANY",
+    "isNullable" : true
+  } ],
+  "workspaceSchemaPath" : [ "dfs", "tmp" ]
+}

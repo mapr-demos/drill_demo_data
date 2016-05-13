@@ -1,0 +1,22 @@
+{
+  "name" : "productview",
+  "sql" : "SELECT CAST(`columns`[0] AS BIGINT) AS `prod_id`, `columns`[1] AS `descr`, `columns`[2] AS `category`, CAST(`columns`[3] AS BIGINT) AS `price`\nFROM `dfs`.`root`.`products/products.csv`",
+  "fields" : [ {
+    "name" : "prod_id",
+    "type" : "BIGINT",
+    "isNullable" : true
+  }, {
+    "name" : "descr",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "category",
+    "type" : "ANY",
+    "isNullable" : true
+  }, {
+    "name" : "price",
+    "type" : "BIGINT",
+    "isNullable" : true
+  } ],
+  "workspaceSchemaPath" : [ "dfs", "tmp" ]
+}
